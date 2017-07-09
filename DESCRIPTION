@@ -1,0 +1,17 @@
+Package: B2R
+Title: Backblaze B2 in R
+Version: 0.0.0.9000
+Authors@R: person("Matthew", "Van Hala", email = "matthew.vanhala@example.com", role = c("aut", "cre"))
+Description: R interface to the Backblaze B2 API
+Depends: R (>= 3.1.2)
+Imports:
+  base64enc,
+  dplyr (>= 0.7.0),
+  httr,
+  openssl,
+  purrr,
+  rlang
+License: MIT
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
