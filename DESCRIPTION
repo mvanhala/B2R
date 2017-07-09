@@ -8,6 +8,7 @@ Imports:
   base64enc,
   dplyr (>= 0.7.0),
   httr,
+  mime,
   openssl,
   purrr,
   rlang
