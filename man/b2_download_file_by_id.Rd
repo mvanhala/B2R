@@ -4,13 +4,15 @@
 \alias{b2_download_file_by_id}
 \title{Download a file}
 \usage{
-b2_download_file_by_id(file_id, output_file, ...)
+b2_download_file_by_id(file_id, output_file, overwrite = FALSE, ...)
 }
 \arguments{
 \item{file_id}{The file id}
 
 \item{output_file}{(Optional) Path of the file on disk to which to save
 the downloaded content}
+
+\item{overwrite}{Whether to overwrite the existing output file}
 
 \item{...}{Optional parameters (see details)}
 }

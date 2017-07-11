@@ -4,7 +4,8 @@
 \alias{b2_download_file_by_name}
 \title{Download a file}
 \usage{
-b2_download_file_by_name(bucket_name, file_name, output_file, ...)
+b2_download_file_by_name(bucket_name, file_name, output_file,
+  overwrite = FALSE, ...)
 }
 \arguments{
 \item{bucket_name}{The name of the bucket containing the file}
@@ -13,6 +14,8 @@ b2_download_file_by_name(bucket_name, file_name, output_file, ...)
 
 \item{output_file}{(Optional) Path of the file on disk to which to save
 the downloaded content}
+
+\item{overwrite}{Whether to overwrite the existing output file}
 
 \item{...}{Optional parameters (see details)}
 }

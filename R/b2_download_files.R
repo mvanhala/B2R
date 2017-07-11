@@ -21,13 +21,14 @@
 #' @param file_id The file id
 #' @param output_file (Optional) Path of the file on disk to which to save
 #' the downloaded content
+#' @param overwrite Whether to overwrite the existing output file
 #' @param ... Optional parameters (see details)
 #' @return The response from \code{httr::GET}
 #' @export
-b2_download_file_by_id <- function(file_id, output_file, ...) {
+b2_download_file_by_id <- function(file_id, output_file, overwrite = FALSE, ...) {
   output <- httr::write_memory()
   if (!missing(output_file)) {
-    output <- httr::write_disk(output_file)
+    output <- httr::write_disk(output_file, overwrite = overwrite)
   }
 
   file_resp <- httr::GET(
@@ -67,13 +68,14 @@ b2_download_file_by_id <- function(file_id, output_file, ...) {
 #' @param file_name The name of the file in the bucket
 #' @param output_file (Optional) Path of the file on disk to which to save
 #' the downloaded content
+#' @param overwrite Whether to overwrite the existing output file
 #' @param ... Optional parameters (see details)
 #' @return The response from \code{httr::GET}
 #' @export
-b2_download_file_by_name <- function(bucket_name, file_name, output_file, ...) {
+b2_download_file_by_name <- function(bucket_name, file_name, output_file, overwrite = FALSE, ...) {
   output <- httr::write_memory()
   if (!missing(output_file)) {
-    output <- httr::write_disk(output_file)
+    output <- httr::write_disk(output_file, overwrite = overwrite)
   }
 
   file_resp <- httr::GET(
